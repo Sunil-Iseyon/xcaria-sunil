@@ -1,0 +1,18 @@
+.nav-logo h1{
+    position: relative;
+    right: 300px;
+    font-weight: 600;
+    /* color: transparent; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+   
+    background: linear-gradient(to right,white,green);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    font-size: 2rem;
+}
+.options{
+   width: 200px;
+   
+}
