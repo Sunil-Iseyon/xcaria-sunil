@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "../components/analytics";
+import Nav from '../components/nav';
 
 // function generateMetadata() {
 //   return {
@@ -13,19 +14,19 @@ import { Analytics } from "../components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "xcaria.com",
+    template: "%s | xcaria.com",
   },
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
     title: "chronark.com",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "AI and ML solutions for the future of retail analytics",
+    url: "https://xcaria.com",
+    siteName: "xcaria.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://xcaria.com/og.png",
         width: 1920,
         height: 1080,
       },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "xCaria",
     card: "summary_large_image",
   },
   icons: {
@@ -76,6 +77,7 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        <Nav />
         {children}
       </body>
     </html>
