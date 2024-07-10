@@ -8,86 +8,18 @@
   height: 300px;
   border-radius: 0.5rem;
   place-content: center;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
   width: 30%;
-  /* gap: 50px; */
-  /* display: grid; */
-  /* box-sizing: border-box; */
 }
-.iB1 {
-  background-color: #010602;
-  opacity: 0.8;
-  background-image: linear-gradient(#172120 1px, transparent 1px),
-    linear-gradient(to right, #172120 1px, #010602 1px);
-  background-size: 20px 20px;
-}
-/* .iB2 {
-  background-color: #000;
-  opacity: 0.3;
-  background-image: radial-gradient(#e6f0eb 0.45px, transparent 0.45px),
-    radial-gradient(#e6f0eb 0.45px, #000 0.45px);
-  background-size: 18px 18px;
-  background-position: 0 0, 9px 9px;
-} */
-
-.iB3 {
-  background-color: #000000;
-  opacity: 0.1;
-  background-image: linear-gradient(45deg, #444cf7 50%, #e5e5f7 50%);
-  background-size: 10px 10px;
-}
-/* .iB4 {
-  background-color: #000301;
-  opacity: 0.8;
-  background-image: repeating-linear-gradient(
-      45deg,
-      #0b120c 25%,
-      transparent 25%,
-      transparent 75%,
-      #0b120c 75%,
-      #0b120c
-    ),
-    repeating-linear-gradient(
-      45deg,
-      #0b120c 25%,
-      #000301 25%,
-      #000301 75%,
-      #0b120c 75%,
-      #0b120c
-    );
-  background-position: 0 0, 10px 10px;
-  background-size: 20px 20px;
-} */
-.sect {
+.container {
   width: 25%;
   height: 350px;
   place-content: center;
-  /* display: flex; */
-  /* --hue-1: 210; */
-  /* --hue-2: 238; */
-  position: relative;
-  /* justify-content: center; */
-  /* color:white;
-  text-align: center; */
-  /* padding: 4rem 2rem 3rem; */
-  /* align-items: center; */
-
-  /* background-color: #444cf7; */
-  /* background: linear-gradient(black, black) padding-box,
-    linear-gradient(
-        135deg,
-        rgb(4, 249, 208) 0%,
-        black,
-        black,
-        rgb(0, 255, 119) 100%
-      )
-      border-box; */
+  /* position: relative; */
+  text-align: center; 
   background: linear-gradient(
     135deg,
     rgba(48, 227, 170, 0.174),
-    rgba(255, 255, 255, 0)
+    rgba(0, 14, 10, 0.174)
   );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -96,13 +28,8 @@
   border-radius: 1.25rem;
   overflow: hidden;
   /* padding: 5px; */
-  /* -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
 }
-.sect:hover {
+.container:hover {
   border: 2px solid transparent;
   background: linear-gradient(black, black) padding-box,
     linear-gradient(
@@ -114,12 +41,6 @@
       )
       border-box;
 }
-.sect:hover .descp {
-  height: 50%;
-  /* bottom: 0px; */
-  background-color: rgba(48, 227, 170, 0.174);
-  backdrop-filter: blur(10px);
-}
 .descp {
   height: 70px;
   text-align: center;
@@ -130,17 +51,31 @@
   /* bottom: 40px; */
   transition: 0.5s;
 }
-.sect:hover .descp {
-  height: 180px;
+.container:hover .descp {
+  height: 150px;
   bottom: 0px;
   background-color: rgba(48, 227, 170, 0.174);
   backdrop-filter: blur(10px);
 }
-.sect button {
+.view {
   margin: 20px;
   opacity: 0;
+  /* outline: none; */
+  /* border: none; */
+  font-size: 12px;
 }
-.sect:hover button {
+.container:hover .view {
   visibility: visible;
   opacity: 1;
+  /* outline: none; */
+  /* border: none; */
+}
+.span1{
+  
+    background-image: conic-gradient(from 90deg at 50% 50%,#00ff77 0%,#04f9d0 50%,#000000 100%);
+
+}
+.view:hover .span1{
+  background-image:linear-gradient(#00ff77 ,#04f9d0);
+  
 }
