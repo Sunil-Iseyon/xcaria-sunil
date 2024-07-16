@@ -16,6 +16,6 @@
 // module.exports = withMDX({
 //   pageExtensions:['js','jsx','mdx'],
 // })
-=======
+
 // module.exports = withMDX(nextConfig)
 
