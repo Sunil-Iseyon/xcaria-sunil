@@ -1,0 +1,93 @@
+.bloglogo{
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+   color: #a4fff990;
+   letter-spacing: 5px;
+   cursor: pointer;
+}
+.bloglogo span{
+    transition: 0.5s;
+}
+.bloglogo:hover span:nth-child(1)
+{
+    margin-right: 40px;
+}
+.bloglogo:hover span:nth-child(1)::after{
+    content: '';
+}
+.bloglogo:hover span:nth-child(2)
+{
+    margin-left: 40px;
+    
+}
+.bloglogo:hover span:nth-child(2){
+    color: #fff;
+    text-shadow: 0 0 3px #fff,
+                 0 0 3px #fff,
+                 0 0 3px #fff,
+                 0 0 3px #fff;
+}
+.bloglogo:hover span:nth-child(1){
+    color: #f7f7f768;
+    
+}
+
+
+/* shadow text */
+.bloglogo span{
+    transition: 1.5s;
+}
+.bloglogo:hover span{
+    filter: blur(20px);
+    opacity: 0;
+    transform: scale(2);
+}
+.bloglogo span:nth-child(14n+1)
+{
+    transition-delay: 0s;
+}
+.bloglogo span:nth-child(14n+2)
+{
+    transition-delay: 0.1s;
+}.bloglogo span:nth-child(14n+3)
+{
+    transition-delay: 0.2s;
+}.bloglogo span:nth-child(14n+4)
+{
+    transition-delay: 0.3s;
+}.bloglogo span:nth-child(14n+5)
+{
+    transition-delay: 0.4s;
+}.bloglogo span:nth-child(14n+6)
+{
+    transition-delay: 0.5s;
+}.bloglogo span:nth-child(14n+7)
+{
+    transition-delay: 0.6s;
+}
+.bloglogo span:nth-child(14n+8)
+{
+    transition-delay: 0.7s;
+}
+.bloglogo span:nth-child(14n+9)
+{
+    transition-delay: 0.8s;
+}.bloglogo span:nth-child(14n+10)
+{
+    transition-delay: 0.9s;
+}.bloglogo span:nth-child(14n+11)
+{
+    transition-delay: 0.10s;
+}.bloglogo span:nth-child(14n+12)
+{
+    transition-delay: 0.11s;
+}.bloglogo span:nth-child(14n+13)
+{
+    transition-delay: 0.12s;
+}.bloglogo span:nth-child(14n+14)
+{
+    transition-delay: 0.12s;
+    
+   
+}

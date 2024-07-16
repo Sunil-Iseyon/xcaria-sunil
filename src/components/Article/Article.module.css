@@ -1,0 +1,13 @@
+.card{
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(62, 62, 62, 0.342);
+    padding: 18px;
+    background-color: rgba(255, 255, 255, 0.088);
+    backdrop-filter: blur(30px);
+    gap: 20px;
+    
+}
+.card:hover{
+    border: solid 1.5px rgba(0, 255, 213, 0.703);
+}
