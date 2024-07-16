@@ -1,0 +1,81 @@
+#part canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.insideBox {
+  height: 300px;
+  border-radius: 0.5rem;
+  place-content: center;
+  width: 30%;
+}
+.container {
+  width: 25%;
+  height: 350px;
+  place-content: center;
+  /* position: relative; */
+  text-align: center; 
+  background: linear-gradient(
+    135deg,
+    rgba(48, 227, 170, 0.174),
+    rgba(0, 14, 10, 0.174)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* border: 1.5px solid rgba(255,255,255,0.18); */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  /* padding: 5px; */
+}
+.container:hover {
+  border: 2px solid transparent;
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(
+        135deg,
+        rgb(4, 249, 208) 0%,
+        black,
+        black,
+        rgb(0, 255, 119) 100%
+      )
+      border-box;
+}
+.descp {
+  height: 70px;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  position: absolute;
+  /* bottom: 40px; */
+  transition: 0.5s;
+}
+.container:hover .descp {
+  height: 150px;
+  bottom: 0px;
+  background-color: rgba(48, 227, 170, 0.174);
+  backdrop-filter: blur(10px);
+}
+.view {
+  margin: 20px;
+  opacity: 0;
+  /* outline: none; */
+  /* border: none; */
+  font-size: 12px;
+}
+.container:hover .view {
+  visibility: visible;
+  opacity: 1;
+  /* outline: none; */
+  /* border: none; */
+}
+.span1{
+  
+    background-image: conic-gradient(from 90deg at 50% 50%,#00ff77 0%,#04f9d0 50%,#000000 100%);
+
+}
+.view:hover .span1{
+  background-image:linear-gradient(#00ff77 ,#04f9d0);
+  
+}

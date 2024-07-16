@@ -78,6 +78,7 @@ function Nav() {
   }, []);
 
   return (
+	// backdrop-blur
 	<header ref={ref}>
 	  <div
 		className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
