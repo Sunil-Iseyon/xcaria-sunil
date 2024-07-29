@@ -7,15 +7,17 @@ import { redirect } from "next/navigation";
 export default async function ProtectedPage() {
   const supabase = createClient();
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data, error } = await supabase.auth.getUser()
 
-  if (!user) {
+  if (error || !data?.user) {
     return redirect("/login");
   }
+  function url(props:any)
+  {
 
-  return redirect("/hero");
+  }
+
+  return redirect("/projects");
 
   // return (
   //   <div className="flex-1 w-full flex flex-col gap-20 items-center text-white">

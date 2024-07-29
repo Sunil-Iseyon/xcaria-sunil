@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 
 const AnimatedTextWord = ({text1}) =>{
@@ -30,15 +30,17 @@ const AnimatedTextWord = ({text1}) =>{
     initial="hidden"
     animate="show"
     variants={fadeInUpAnimation}
+    className="text-center"
+
     >
        {letters1.map((letter, index) => (
         <motion.span variants={fadeInUpAnimation} key={index}
-        className='uppercase z-10 text-center text-5xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-green-500 font-bold leading-tight tracking-tight'>
+        className='uppercase text-center w-[100%] text-3xl sm:text-2xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-slate-400 font-bold leading-tight tracking-tight '>
           {letter === " " ? " " : letter}
         </motion.span>
       ))}
       <motion.div variants={fadeInUpAnimation}
-        className='text-white w-[750px] my-5 mx-auto text-sm text-center'>
+        className='text-white max-w-fit my-5 mx-auto text-sm  md:text-base lg:text-lg xl:text-xl text-center'>
          <h3 > Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus placeat quos eum 
           laudantium doloremque, nam praesentium aspernatur ipsum</h3>
         </motion.div>

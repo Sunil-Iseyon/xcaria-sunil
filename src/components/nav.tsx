@@ -59,6 +59,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react'; // Ensure you import the correct icons
+import { logOut } from '../app/logout/action';
 
 function Nav() {
   const ref = useRef(null);
@@ -106,6 +107,10 @@ function Nav() {
 			<Link href="/login" className="px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200">
 			  Login
 			</Link>
+			<form action={logOut}>
+			<button type="submit" className="px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200">
+			  LogOut
+			</button></form>
 			<Link href="/request-demo" className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 duration-200">
 			  Request Demo
 			</Link>

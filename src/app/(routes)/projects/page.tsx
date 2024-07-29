@@ -140,22 +140,35 @@
 import { createClient } from '../../../utils/supabase/server'
 import {Card} from '../../../components/card'
 import {Article} from './article'
+import HeroSection from '@/src/components/HeroSection/HeroSection'
+import { redirect } from "next/navigation";
 
 export default async function Page() {
-  const supabase = createClient()
-  const { data: projects, error } = await supabase.from('projects').select()
+  // const supabase = createClient()
+  // const { data: projects, error } = await supabase.from('projects').select()
 
-  if (error) {
-    console.error('Error fetching blogs:', error)
-    return <div>Error: {error.message}</div>
+  // const { data, error2 } = await supabase.auth.getUser()
+
+  // if (error) {
+  //   console.error('Error fetching blogs:', error)
+  //   return <div>Error: {error.message}</div>
+  // }
+  // return <pre>{JSON.stringify(projects, null, 2)}</pre>
+  const supabase = createClient();
+
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    return redirect("/login");
   }
-  return <pre>{JSON.stringify(projects, null, 2)}</pre>  // return (
-  //   <div className="grid grid-cols-1 gap-4">
-  //     {blogs.map((blog, index) => (
-  //       <Card key={index}>
-  //         <Article blog={blog} />
-  //       </Card>
-  //     ))}
-  //   </div>
-  // )
+
+  const { data: activeSession } = await supabase.auth.getSession();
+
+	if (!activeSession.session) {
+		return redirect("/auth");
+	}
+    return (
+      <main className='min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]'>
+    <HeroSection/>
+   </main>
+  )
 }
