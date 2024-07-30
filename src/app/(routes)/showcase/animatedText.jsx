@@ -40,7 +40,7 @@ const AnimatedTextWord = ({text1}) =>{
         </motion.span>
       ))}
       <motion.div variants={fadeInUpAnimation}
-        className='text-white max-w-fit my-5 mx-auto text-sm  md:text-base lg:text-lg xl:text-xl text-center'>
+        className='text-white max-w-fit my-5 mx-auto text-sm  text-center'>
          <h3 > Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus placeat quos eum 
           laudantium doloremque, nam praesentium aspernatur ipsum</h3>
         </motion.div>
