@@ -139,7 +139,7 @@
 
 import { createClient } from '../../../utils/supabase/server'
 import {Card} from '../../../components/card'
-import {Article} from './article'
+// import {Article} from './article'
 import HeroSection from '@/src/components/HeroSection/HeroSection'
 import { redirect } from "next/navigation";
 
