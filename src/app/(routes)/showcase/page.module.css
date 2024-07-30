@@ -36,9 +36,10 @@
         rgb(0, 255, 119) 100%
       )
       border-box;
-      padding: 0px;
+      padding: 10px 0px;
+      /* padding-top: 10px; */
       place-content:initial;
-      /* height: 220px; */
+      height: 220px;
 }
 .descp {
   height: 70px;
