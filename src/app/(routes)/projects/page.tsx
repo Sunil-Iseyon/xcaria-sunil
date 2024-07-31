@@ -145,7 +145,7 @@ import { redirect } from "next/navigation";
 
 export default async function Page() {
   // const supabase = createClient()
-  // const { data: projects, error } = await supabase.from('projects').select()
+  // const { data: projects, error } = await s  upabase.from ('projects').select()
 
   // const { data, error2 } = await supabase.auth.getUser()
 
