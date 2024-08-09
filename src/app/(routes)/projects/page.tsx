@@ -154,18 +154,18 @@ export default async function Page() {
   //   return <div>Error: {error.message}</div>
   // }
   // return <pre>{JSON.stringify(projects, null, 2)}</pre>
-  const supabase = createClient();
+  // const supabase = createClient();
 
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    return redirect("/login");
-  }
+  // const { data, error } = await supabase.auth.getUser();
+  // if (error || !data?.user) {
+  //   return redirect("/login");
+  // }
 
-  const { data: activeSession } = await supabase.auth.getSession();
+  // const { data: activeSession } = await supabase.auth.getSession();
 
-	if (!activeSession.session) {
-		return redirect("/auth");
-	}
+	// if (!activeSession.session) {
+	// 	return redirect("/auth");
+	// }
     return (
       <main className='min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]'>
     <HeroSection/>

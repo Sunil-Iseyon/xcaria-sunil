@@ -5,17 +5,17 @@ import { createClient } from "@/src/utils/supabase/server";
 import { redirect } from "next/navigation";
 
 export default async function ProtectedPage() {
-  const supabase = createClient();
+  // const supabase = createClient();
 
-  const { data, error } = await supabase.auth.getUser()
+  // const { data, error } = await supabase.auth.getUser()
 
-  if (error || !data?.user) {
-    return redirect("/login");
-  }
-  function url(props:any)
-  {
+  // if (error || !data?.user) {
+  //   return redirect("/login");
+  // }
+  // function url(props:any)
+  // {
 
-  }
+  // }
 
   return redirect("/projects");
 

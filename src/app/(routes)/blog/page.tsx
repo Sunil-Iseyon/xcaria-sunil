@@ -7,18 +7,18 @@ import { createClient } from "@/src/utils/supabase/server";
 import { redirect } from "next/navigation";
 
 const  page = async() => {
-  const supabase = createClient();
+  // const supabase = createClient();
 
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    return redirect("/login");
-  }
+  // const { data, error } = await supabase.auth.getUser();
+  // if (error || !data?.user) {
+  //   return redirect("/login");
+  // }
 
-  const { data: activeSession } = await supabase.auth.getSession();
+  // const { data: activeSession } = await supabase.auth.getSession();
 
-	if (!activeSession.session) {
-		return redirect("/auth");
-	}
+	// if (!activeSession.session) {
+	// 	return redirect("/auth");
+	// }
   return (
     <div className='my-24 mt-[200px]' >
       <BlogOverview/>
