@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function Page({ params }: PageProps) {
   const id = params.showmore;
-  const rawData = await fetch('http://localhost:8080/news');
+  const rawData = await fetch('https://xcaria-public.onrender.com');
   
   if (!rawData.ok) {
     throw new Error('Failed to fetch the data!!!');
