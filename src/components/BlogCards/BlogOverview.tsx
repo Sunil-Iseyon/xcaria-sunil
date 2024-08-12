@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Profilepic from '../../public/patrickBravo.jpeg'
 // import { getAllPosts } from '@/src/app/lib/mdx'
 import blogstyle from './blog.module.css'
-const BlogOverview = async() => {
+const BlogOverview = () => {
   // const posts =await getAllPosts();
 
   return (

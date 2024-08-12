@@ -8,7 +8,7 @@ const HeroSection = () => {
     <div className='text-white h-screen md:[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden  mx-auto py-10 md:py-0'>
           <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="green"
+        fill="cyan"
       />
         <div className='p-4 relative z-10 w-full text-center hero-section'>
 

@@ -2,7 +2,7 @@
     font-size: 9rem;
     -webkit-text-stroke-width: 1px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    -webkit-text-stroke-color: rgb(48, 255, 7);
+    -webkit-text-stroke-color: rgb(7, 201, 255);
     color: transparent;
     /* background: linear-gradient(to right,rgb(255, 255, 255),rgb(3, 255, 3));
     -webkit-background-clip: text; */
@@ -34,12 +34,12 @@
 }
 .search-section input:hover{
   
-    border: solid 2px rgb(48, 255, 7);
+    border: solid 2px rgb(7, 201, 255);
     
 }
 .search-section button{
     
-  background-image: conic-gradient(rgb(95, 223, 40), rgb(14, 103, 0), green, rgb(4, 69, 6), rgb(2, 95, 3));
+  background-image: conic-gradient(rgb(7, 201, 255), rgb(0, 69, 103), rgb(0, 85, 128), rgb(4, 65, 69), rgb(2, 73, 95));
   height: 50px;
   width: 120px;
   
@@ -51,5 +51,5 @@
 
 }
 .search-section button:hover{
-    background-image: conic-gradient(rgb(15, 46, 1), rgb(14, 103, 0), rgb(3, 78, 3), rgb(2, 45, 4), black);
+    background-image: conic-gradient(rgb(1, 36, 46), rgb(0, 74, 103), rgb(3, 62, 78), rgb(2, 31, 45), rgb(24, 153, 151));
 }

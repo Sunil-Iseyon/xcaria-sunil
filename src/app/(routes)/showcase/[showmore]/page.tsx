@@ -1,14 +1,22 @@
 import { datas } from "../datas";
-import Image from "next/image";
 import ViewMorePage from "./show";
 
-interface pageProps {
-  params: { showmore: any };
+interface PageProps {
+  params: { showmore: string };
 }
 
-export default function page({ params }: pageProps) {
+export default async function Page({ params }: PageProps) {
   const id = params.showmore;
+  const rawData = await fetch('http://localhost:8080/news');
+  
+  if (!rawData.ok) {
+    throw new Error('Failed to fetch the data!!!');
+  }
+
+  const data = await rawData.json();
+  
+
   return (
-    <ViewMorePage id={id}/>
+    <ViewMorePage id={id} news={data} />
   );
 }
