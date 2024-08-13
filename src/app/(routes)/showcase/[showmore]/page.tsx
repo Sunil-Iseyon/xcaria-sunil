@@ -2,7 +2,7 @@ import { datas } from "../datas";
 import ViewMorePage from "./show";
 
 interface PageProps {
-  params: { showmore: string };
+  params: { showmore: string }; 
 }
 
 export default async function Page({ params }: PageProps) {
