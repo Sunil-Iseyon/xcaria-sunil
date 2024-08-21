@@ -83,7 +83,7 @@ export default async function RemoteMdxPage() {
           
           {/* desc  */}
           <div className={styles.descp}>
-            <p className="text-xs">{i.descp}</p>
+            <p className="text-xs">{i.descp}</p> 
 
             {/* button  */}
             <Link href={`showcase/${index}`} className={`${styles.view} relative inline-flex h-10 overflow-hidden rounded-full p-[1px] `}>
