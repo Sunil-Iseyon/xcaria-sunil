@@ -23,11 +23,11 @@ export default async function Page({ params }: PageProps) {
   const data = await rawData.json();
   
   const supabase = createClient()
-  //   const { data: activeSession } = await supabase.auth.getSession();
+    const { data: activeSession } = await supabase.auth.getSession();
 
-	// if (!activeSession.session) {
-	// 	return redirect("/auth");
-	// }
+	if (!activeSession.session) {
+		return redirect("/");
+	}
 
 	const { data: user } = await supabase.from("user").select("*").single();
 
