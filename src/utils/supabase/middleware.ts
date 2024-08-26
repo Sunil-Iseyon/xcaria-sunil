@@ -1,4 +1,5 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { cookies } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
 
 export const updateSession = async (request: NextRequest) => {
@@ -91,3 +92,19 @@ export const updateSession = async (request: NextRequest) => {
     });
   }
 };
+
+export async function createSupbaseServerClientReadOnly() {
+	const cookieStore = cookies();
+
+	return createServerClient(
+		process.env.NEXT_PUBLIC_SUPABASE_URL!,
+		process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+		{
+			cookies: {
+				get(name: string) {
+					return cookieStore.get(name)?.value;
+				},
+			},
+		}
+	);
+}

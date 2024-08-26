@@ -75,7 +75,9 @@ const app = express();
 app.use(cors())
 
 app.get('/news', (req, res) => {
-  const news = db.prepare('SELECT * FROM news').all();
+  const news = db.prepare('SELECT * FROM news');
+  
+  
   res.json(news);
 });
 

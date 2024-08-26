@@ -1,6 +1,21 @@
-export default function BlogLayout({
+import { redirect } from "next/navigation";
+import { readUserSession } from "../../lib/actions";
+import { RedirectType } from "next/navigation";
+import { useUserStore } from "../../lib/store/user";
+
+export default async function BlogLayout({
 	children,
 }: { children: React.ReactNode }) {
+
+
+
+    const {data:userSession} =await readUserSession();
+    if(!userSession.session){
+      return redirect('/login');
+  
+    }
+  
+    useUserStore.setState({user:userSession.session.user})
 	return (
 		<div className="container mx-auto">
             <div className="leading-relaxed text-slate-200 antialiased selection:bg-teal-300 selection:text-teal-900">
