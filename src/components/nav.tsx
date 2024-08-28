@@ -60,11 +60,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react'; // Ensure you import the correct icons
 import { logOut } from '../app/logout/action';
+import { usePathname } from 'next/navigation';
 
 function Nav() {
   const ref = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
-
+  const path = usePathname();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsIntersecting(entry.isIntersecting),
@@ -94,17 +95,17 @@ function Nav() {
   
 		  {/* Navigation Links in the middle */}
 		  <div className="flex-1 text-center gap-4">
-			<Link href="/showcase" className="px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200">
+			<Link href="/showcase" className={path.startsWith('/showcase')?"text-white" : "px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200"} >
 			  Showcase
 			</Link>
-			<Link href="/blog" className="px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200">
+			<Link href="/blog" className={path.startsWith('/blog')?"text-white" : "px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200"}>
 			  Blog
 			</Link>
 		  </div>
   
 		  {/* Action buttons on the right */}
 		  <div className="flex items-center gap-4">
-			<Link href="/login" className="px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200">
+			<Link href="/login" className={path.startsWith('/login')?"text-white" : "px-4 py-2 text-zinc-400 hover:text-zinc-100 duration-200"}>
 			  Login
 			</Link>
 			<form action={logOut}>
@@ -118,6 +119,7 @@ function Nav() {
 		</div>
 	  </div>
 	</header>
+	
   );
 }
 
